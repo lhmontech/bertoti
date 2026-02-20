@@ -10,8 +10,31 @@ O texto diz que engenharia de software envolve não só programar, mas também t
 ferramentas usados para manter o código ao longo do tempo. A ideia principal é que engenharia de software é como “programação ao longo do tempo”, ou seja, criar código que seja sustentável e fácil de modificar durante sua vida útil. Também destaca que é importante pensar em três pontos: o código vai mudar com o tempo, o sistema e a empresa podem crescer, e é preciso tomar decisões equilibrando custos e benefícios.
 
 ---
+### 3- Requisitos não funcionais:
 
-### 3- Exemplos de tradeoffs:
+**1. Performance**
+
+Se trata do quão bem o sistema performa, ou seja, o quão rápido e eficiente ele é nos processos executados durante o uso. Por exemplo tempo para carregar páginas, tempo para responder à algum comando dado.
+
+**2. Extensibility (Extensibilidade)**
+
+Se trata do quão fácil é para um sistema ser ampliado e modificado ou seja, quanto mais simples para os desenvolvedores adicionarem novas funcionalidades, maior a extensibilidade do mesmo.
+
+**3. Deployability (Implantabilidade)**
+
+Se trata do quão eficiente é para o sistema ser implantado. 
+
+**4. Security (Segurança)**
+
+Se trata do quão seguro um sistem é para o usuário, se ele pode confiar em informar seus dados pessoais. Usando o mesmo exemplo dos slides, o sistema de um banco tem que ser seguro o suficiente para guardar os dados dos clientes, seguro contra ataques de hackers, invasões ou roubo de informações
+
+**5. Usability (Usablilidade)**
+
+Se trata da fácilidade de uso do sistema para o usuário. Um sistema que se preocupa bastante com a experiência do usuário, é um sistema com uma boa usabilidade.
+
+---
+
+### 4- Exemplos de tradeoffs:
 
 **1. Rapidez vs. Código bem feito**
 
