@@ -47,3 +47,21 @@ Posso fazer algo simples que resolve só o que preciso agora, mas que não serve
 **3. Performance vs. Facilidade de desenvolvimento**
 
 Posso usar uma solução mais simples, que é mais fácil de programar, mas que não é tão rápida. Ou posso usar uma solução mais otimizada, que é mais rápida, mas mais difícil de implementar e entender.
+
+--- 
+
+### 5- É possível testar tudo?
+```C#
+int blech (int j) {
+  j = j - 1 //Deveria ser j = j + 1
+  j = j/30000;
+  return j;
+}
+```
+amostragem: -32768 até 32767
+
+**1. Quantas entradas mostram o erro?**
+4
+
+**2. Quais são?**
+30000, -30000, 29999, -29999
