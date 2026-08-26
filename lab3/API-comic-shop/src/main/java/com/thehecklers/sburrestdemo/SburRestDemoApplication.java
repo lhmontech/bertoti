@@ -19,7 +19,7 @@ public class SburRestDemoApplication {
 	}
 
 }
-@CrossOrigin(origins = {"http://localhost:8090","http://127.0.0.1:5500"})
+@CrossOrigin(origins = {"http://localhost:8080","http://127.0.0.1:5500"})
 
 @RestController
 @RequestMapping("/comics")

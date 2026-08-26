@@ -1,5 +1,4 @@
-console.log("LOJA CARREGADA"); // Se isso não aparecer no console, o cache está te enganando!
-const API_URL = 'http://localhost:8090/comics';
+const API_URL = 'http://localhost:8080/comics';
 const comicGrid = document.getElementById('comic-grid');
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
