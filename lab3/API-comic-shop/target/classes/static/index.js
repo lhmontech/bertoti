@@ -3,16 +3,13 @@ const comicGrid = document.getElementById('comic-grid');
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
 
-// Campos do Formulário
 const inputId = document.getElementById('comic-id');
 const inputName = document.getElementById('name');
 const inputPublisher = document.getElementById('publisher');
 const inputPrice = document.getElementById('price');
 
-// Carregar comics ao iniciar
 document.addEventListener('DOMContentLoaded', fetchComics);
 
-// Função para buscar todas as HQs
 async function fetchComics() {
     try {
         const response = await axios.get(API_URL);
@@ -23,7 +20,6 @@ async function fetchComics() {
     }
 }
 
-// Função para renderizar os cards na tela
 function renderComics(comics) {
     comicGrid.innerHTML = '';
 
@@ -59,7 +55,6 @@ function renderComics(comics) {
     });
 }
 
-// Abrir modal para adicionar
 function openModal() {
     modalTitle.innerText = "Nova HQ";
     inputId.value = "";
@@ -69,7 +64,6 @@ function openModal() {
     modal.classList.remove('hidden');
 }
 
-// Abrir modal para editar
 function editComic(id, name, publisher, price) {
     modalTitle.innerText = "Editar HQ";
     inputId.value = id;
@@ -83,7 +77,6 @@ function closeModal() {
     modal.classList.add('hidden');
 }
 
-// Salvar (POST ou PUT)
 async function saveComic() {
     const comicData = {
         name: inputName.value,
@@ -95,10 +88,8 @@ async function saveComic() {
 
     try {
         if (id) {
-            // Se tem ID, é Edição (PUT)
             await axios.put(`${API_URL}/${id}`, comicData);
         } else {
-            // Se não tem ID, é Novo (POST)
             await axios.post(API_URL, comicData);
         }
         closeModal();
@@ -109,7 +100,6 @@ async function saveComic() {
     }
 }
 
-// Deletar
 async function deleteComic(id) {
     if (confirm("Deseja realmente excluir esta HQ?")) {
         try {
